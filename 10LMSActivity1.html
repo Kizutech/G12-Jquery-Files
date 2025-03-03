@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill-Vibes Motivational Website</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        body {
+            background-image: url(https://cdn.theanimegallery.com/theanimegallery/d9a4e50b-0f2c-452b-bb09-92a9214c13e8-anime-scenery-background.webp);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 50px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('#showStringValue').click(function() {
+                var stringValue = $('#textBox').val();
+                alert(stringValue);
+            });
+
+            $('#showParagraphValue').click(function() {
+                var paragraphValue = $('#myParagraph').html();
+                alert(paragraphValue);
+            });
+
+            $('#showLinkValue').click(function() {
+                var linkValue = $('#myLink').attr('href');
+                alert(linkValue);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Know each other</h1>
+        
+        <h2>What's your name?</h2>
+        <input type="text" id="textBox" value="Enter your name to show value" />
+        <button id="showStringValue">Show Name Value</button>
+
+        <h2>This is my message for you...</h2>
+        <p id="myParagraph">"It takes courage to grow up and become who you really are. Visit us for more <a href="https://www.usatoday.com/story/life/2023/11/30/positive-quotes-to-inspire/11359498002/" id="myLink">Motivational Quotes</a>.</p>
+        <button id="showParagraphValue">Show Paragraph Value</button>
+        <button id="showLinkValue">Show Hyperlink Value</button>
+    </div>
+</body>
+</html>

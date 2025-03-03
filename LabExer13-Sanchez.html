@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabExer13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .menu {
+            position: relative;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        #item {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #item:hover {
+            background-color: #0056b3;
+        }
+
+        #submenu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin-top: 5px;
+            z-index: 1;
+        }
+
+        #submenu a {
+            display: block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        #submenu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        main {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to LabExer13</h1>
+        <p>This is an example design for jquery</p>
+    </header>
+
+    <div class="menu"> 
+        <div id="item">Drop-Down</div> 
+        <div id="submenu"> 
+            <a href= "09LMSActivity1.html">Link 1</a> 
+            <a href="10LMSActivity1.html">Link 2</a> 
+            <a href="LabExer13-Sanchez.html">Link 3</a> 
+        </div> 
+    </div> 
+
+    <main>
+        <h2>Main Content</h2>
+        <p>My 1st Paragraph</p>
+        <p>My 2nd Paragraph</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LabExer13. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $("#item").click(function() { 
+            $("#submenu").slideToggle(500); 
+        });
+    </script>
+</body>
+</html>

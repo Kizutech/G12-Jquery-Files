@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Laboratory Exercise 1</title>
+
+    <STYLE> 
+    .ancestors * { 
+        display: block; 
+        border: 2px solid lightgrey; 
+        color: lightgrey; 
+        padding: 5px; 
+        margin: 15px; } 
+        </STYLE>
+</head>
+<body>
+    <DIV CLASS="ancestors"> 
+        <DIV STYLE="width:500px;">div (great-grandparent) 
+            <UL>ul (grandparent) 
+                <LI>li (direct parent) 
+                    <SPAN>span</SPAN> 
+                </LI> 
+            </UL> 
+        </DIV> 
+    </DIV>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $("span").parentsUntil("div").css({"color": "red"});
+    </script>
+</body>
+</html>
